@@ -13,7 +13,7 @@ def ball_score(rolls):
         return sum(map(int, ' '.join(rolls).replace('X', '10').replace('-', '0').split()))
 
 
-def get_score(roll_sequence):
+def frame_score(roll_sequence):
     """
     see: http://codingdojo.org/kata/Bowling/
     Given a valid sequence of rolls for one line of American Ten-Pin Bowling, produce the total score for the game
@@ -44,7 +44,7 @@ def get_score(roll_sequence):
 def main():
     import sys
     if len(sys.argv) > 1:
-        print(get_score(sys.argv[1].strip()))
+        print(frame_score(sys.argv[1].strip()))
     else:
         print('Requires a valid sequence of rolls (e.g. python bowling.py "5/ 5/ X 5/ 5/2 5/ 5/ 5/ 5/ 5/5"')
 

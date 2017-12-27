@@ -83,9 +83,12 @@ class TestMarkdownPy(unittest.TestCase):
         self.assertEqual(src.bowling.frame_score('81 -9 2/ X 63 7- 52 X -6 2/X'), 122)
 
     def test_reversi(self):
-        self.assertEqual(src.reversi.legal_moves(self.reversi_t1), self.reversi_a1)
-        self.assertEqual(src.reversi.legal_moves(self.reversi_t2), self.reversi_a2)
-        self.assertEqual(src.reversi.legal_moves(self.reversi_t3), self.reversi_a3)
+        self.assertEqual(src.reversi.rstrip(src.reversi.legal_moves(self.reversi_t1)),
+                         src.reversi.rstrip(self.reversi_a1))
+        self.assertEqual(src.reversi.rstrip(src.reversi.legal_moves(self.reversi_t2)),
+                         src.reversi.rstrip(self.reversi_a2))
+        self.assertEqual(src.reversi.rstrip(src.reversi.legal_moves(self.reversi_t3)),
+                         src.reversi.rstrip(self.reversi_a3))
 
 
 if __name__ == '__main__':

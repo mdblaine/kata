@@ -1,0 +1,4 @@
+Katas implemented:
+	Bowling
+	Reversi
+	
